@@ -20,7 +20,7 @@ return [
         'type' => 1,
         'children' => [
             'createPost',
-            'UpdateOwnPost',
+            //'UpdateOwnPost',
         ],
     ],
     'admin' => [
