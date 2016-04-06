@@ -1,24 +1,25 @@
 {
     "name": "peskovsb/reporbac",
-    "description": "Yii 2 Basic Project Template",
-    "keywords": ["yii2", "framework", "basic", "project template"],
-    "homepage": "http://www.yiiframework.com/",
+    "description": "SEO-service Yii 2",
+    "homepage": "http://www.peskovsb.ru",
     "type": "project",
     "license": "BSD-3-Clause",
-    "minimum-stability": "stable",
     "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
+        "wiki": "http://www.peskovsb.ru/blog/60/seo-service-on-yii2-installing-of-application",
+        "source": "https://github.com/peskovsb/reporbac"
     },
     "minimum-stability": "stable",
     "require": {
         "php": ">=5.4.0",
-        "yiisoft/yii2": ">=2.0.5",
+        "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
+        "yiisoft/yii2-swiftmailer": "*",
+        "bower-asset/html5shiv": "*",
+        "bower-asset/respond": "*",
+        "bower-asset/jquery": "1.*",
+        "kartik-v/yii2-widget-datepicker": "*",
+        "kartik-v/yii2-field-range": "*",
+        "peskovsb/yii2-hybrid-authmanager": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-codeception": "*",
@@ -29,24 +30,7 @@
     "config": {
         "process-timeout": 1800
     },
-    "scripts": {
-        "post-create-project-cmd": [
-            "yii\\composer\\Installer::postCreateProject"
-        ]
-    },
     "extra": {
-        "yii\\composer\\Installer::postCreateProject": {
-            "setPermission": [
-                {
-                    "runtime": "0777",
-                    "web/assets": "0777",
-                    "yii": "0755"
-                }
-            ],
-            "generateCookieValidationKey": [
-                "config/web.php"
-            ]
-        },
         "asset-installer-paths": {
             "npm-asset-library": "vendor/npm",
             "bower-asset-library": "vendor/bower"
